@@ -16,7 +16,6 @@ class Student implements Serializable {
         this.grade = grade;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -68,7 +67,6 @@ public class StudentManagementSystem {
         }
     }
 
-    // File I/O methods for persistence
     private void loadStudents() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("students.dat"))) {
             students = (List<Student>) in.readObject();
